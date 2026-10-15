@@ -21,7 +21,7 @@ def test_status_code_e_retorno(client):
 def test_home_mensagem(client):
     resposta = client.get('/')
     dados = resposta.get_json()
-    assert dados['mensagem'] == "Bem-vindo a API FastOrder!"
+    assert dados['mensagem'] == "Bem-vindo ao API FastOrder!"
 
 
 def test_soma(client):
