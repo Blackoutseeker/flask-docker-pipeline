@@ -15,7 +15,7 @@ def test_status_code_e_retorno(client):
 
     assert resposta.status_code == 200
     assert dados['status'] == "operacional"
-    assert dados['servico'] == "Fastorder-Web"
+    assert dados['servico'] == "FastOrder-Web"
 
 
 def test_home_mensagem(client):
