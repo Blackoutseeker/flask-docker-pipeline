@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify({"mensagem: ": "Bem-vindo ao API FastOrder!"})
+    return jsonify({"mensagem": "Bem-vindo ao API FastOrder!"})
 
 
 @app.route('/api/status')
 def status():
-    return jsonify({"status: ": "operacional", "servico": "FastOrder-Web"})
+    return jsonify({"status": "operacional", "servico": "FastOrder-Web"})
 
 
 @app.route('/api/soma')
@@ -24,9 +24,9 @@ def soma():
         if resultado.is_integer():
             resultado = int(resultado)
 
-        return jsonify({"Resultado: ": resultado})
+        return jsonify({"resultado": resultado})
     except ValueError:
-        return jsonify({"Erro: ": "Parâmetros inválidos."}), 400
+        return jsonify({"erro": "Parâmetros inválidos."}), 400
 
 
 if __name__ == '__main__':
